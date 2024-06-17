@@ -1,0 +1,14 @@
+# simple looping program
+# sums all integers from 100 to 0
+
+@start
+
+@loop
+	%s  = phi @start 100, @loop %s1
+	%n  = phi @start   0, @loop %n1
+	%n1 = sub %n, 1
+	%s1 = add %s, %n
+	jez %n1, @end, @loop
+
+@end
+	ret

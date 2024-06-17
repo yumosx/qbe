@@ -1,0 +1,6 @@
+@start
+	%ten = copy 10
+@baz
+    %zero = copy %ten
+@end
+    ret
